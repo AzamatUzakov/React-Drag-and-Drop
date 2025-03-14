@@ -23,7 +23,6 @@ type taskType = {
 
 
 export const Column: React.FC<ColumnProps> = ({ title, id, tasks, setTasks }) => {
-	const [className, setClassName] = useState("");
 
 	return (
 		<Card
@@ -49,10 +48,7 @@ export const Column: React.FC<ColumnProps> = ({ title, id, tasks, setTasks }) =>
 				console.log("findTask", resultTranfer);
 
 			}}
-			className={cn("w-[100%] flex flex-col bg-gray-100 shadow-md rounded-2xl overflow-hidden",
-				className)
-			}
-		>
+			className="w-[100%] flex flex-col bg-gray-100 shadow-md rounded-2xl overflow-hidden">
 
 
 			<div className="p-4 bg-gray-200 flex justify-between items-center">
@@ -60,7 +56,7 @@ export const Column: React.FC<ColumnProps> = ({ title, id, tasks, setTasks }) =>
 			</div>
 
 
-			<ScrollArea className={cn("flex-1 p-4 space-y-3", className)}>
+			<ScrollArea className="flex-1 p-4 space-y-3">
 
 				{tasks.filter((task) => task.columnId === id)
 					.map((task) => (
