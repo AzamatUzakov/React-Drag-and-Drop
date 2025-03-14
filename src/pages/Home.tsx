@@ -14,9 +14,9 @@ type taskType = {
 
 }
 const boardArr: boardType[] = [
-	{ id: 1, title: "Почистить обувь", columnId: 1 },
-	{ id: 2, title: "Сделать уроки", columnId: 2 },
-	{ id: 3, title: "Убраться в комнате", columnId: 3 }
+	{ id: 1, title: "Начать ", columnId: 1 },
+	{ id: 2, title: "Процесс", columnId: 2 },
+	{ id: 3, title: "Закончено", columnId: 3 }
 ]
 const task = [
 	{ id: 1, title: "Почистить обувь", columnId: 1 },
