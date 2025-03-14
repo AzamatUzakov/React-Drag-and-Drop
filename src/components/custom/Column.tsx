@@ -1,10 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { TaskCard } from "./Task";
-import { log } from "node:console";
-import { cn } from "@/lib/utils";
 
 
 interface ColumnProps {
@@ -29,7 +27,7 @@ export const Column: React.FC<ColumnProps> = ({ title, id, tasks, setTasks }) =>
 			onDragOver={(e) => e.preventDefault()}
 			//			onDragEnter={(e) => }
 			// onDragLeave={}
-			onDrop={(e) => {
+			onDrop={(e: React.DragEvent<HTMLDivElement>) => {
 				const data = e.dataTransfer.getData("text/plain")
 
 				if (!data) {

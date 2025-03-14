@@ -2,7 +2,8 @@ import { GripVertical } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { Column } from "./Column";
+
+
 
 interface TaskCardProps {
 	id: number;
@@ -16,7 +17,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ title, id, columnId }) => {
 
 
 	return (
-		<Card 
+		<Card
 			draggable
 			onDragStart={(e) => {
 				setClassName("bg-gray-500");
@@ -34,7 +35,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ title, id, columnId }) => {
 			}}
 
 
-			onDrop={(e) => {
+			onDrop={() => {
 				setClassName("flex")
 			}}
 			className={cn(
